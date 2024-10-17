@@ -1,0 +1,47 @@
+name: Build and Publish Docker Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+      - 'docker-compose.yml'
+      - '.github/workflows/docker-publish.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do código no repositório
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Configurar Docker para fazer login no Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      # Build da imagem do backend
+      - name: Build Backend Docker Image
+        run: |
+          docker build -t luissimon96/casal-resolve-backend:latest ./backend
+
+      # Build da imagem do frontend
+      - name: Build Frontend Docker Image
+        run: |
+          docker build -t luissimon96/casal-resolve-frontend:latest ./frontend
+
+      # Push da imagem do backend para o Docker Hub
+      - name: Push Backend Image to Docker Hub
+        run: |
+          docker push luissimon96/casal-resolve-backend:latest
+
+      # Push da imagem do frontend para o Docker Hub
+      - name: Push Frontend Image to Docker Hub
+        run: |
+          docker push luissimon96/casal-resolve-frontend:latest
