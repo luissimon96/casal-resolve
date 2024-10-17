@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  # Serviço do backend
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/casal-resolve
+    depends_on:
+      - mongo
+
+  # Serviço do frontend
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+
+  # Serviço do MongoDB
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+# Volume para persistir os dados do MongoDB
+volumes:
+  mongo-data:
