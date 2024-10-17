@@ -46,7 +46,6 @@ Antes de iniciar, certifique-se de que você tem os seguintes requisitos instala
    ```bash
    docker-compose up --build
 
-
 Este comando vai fazer o seguinte:
 - Buildar as imagens do frontend e backend.
 - Subir os containers do frontend, backend e do banco de dados MongoDB.
@@ -56,8 +55,8 @@ Este comando vai fazer o seguinte:
 - Frontend: (http://localhost:3000)
 - Backend (API): (http://localhost:5000)
 
+## Estrutura do Projeto
 
-Estrutura do Projeto
    ```bash
    /casal-resolve
    │
@@ -74,18 +73,16 @@ Estrutura do Projeto
    ├── docker-compose.yml # Arquivo de configuração do Docker Compose
    └── .env              # Variáveis de ambiente
 
-Comandos Úteis
+### Comandos Úteis
 - Para parar os containers:
 
    ```bash
    docker-compose down
 
-
 - Para verificar os logs de um serviço específico (ex: backend):
 
    ```bash
    docker-compose logs backend
-
 
 - Para rodar os containers em modo "detached" (em segundo plano):
 
@@ -93,5 +90,5 @@ Comandos Úteis
    docker-compose up -d
 
 
-Próximos Passos
+## Próximos Passos
 Após rodar a aplicação localmente, o próximo passo será fazer o deploy da aplicação em uma plataforma de hospedagem compatível com Docker Compose, como Heroku, DigitalOcean, ou AWS.
