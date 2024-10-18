@@ -1,15 +1,15 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Altere esta linha
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const history = useHistory();
+  const navigate = useNavigate(); // Altere esta linha
 
   const handleLogout = () => {
     // Aqui você pode adicionar a lógica para remover o token de autenticação ou informações do usuário
     console.log("Usuário deslogado");
     // Redireciona para a página de login após logout
-    history.push("/login");
+    navigate("/login"); // Altere esta linha
   };
 
   return (
