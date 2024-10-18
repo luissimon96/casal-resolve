@@ -1,5 +1,11 @@
 # Casal Resolve - MVP
 
+### Links de acesso
+[Casal-Resolve](https://casal-resolve.vercel.app/)
+[Login](https://casal-resolve.vercel.app/login)
+[Registrar](https://casal-resolve.vercel.app/register)
+[Dashboard](https://casal-resolve.vercel.app/dashboard)
+
 ## Objetivo
 O **Casal Resolve** é um MVP (Minimum Viable Product) desenvolvido para ajudar casais a resolver atritos e conflitos de maneira saudável e estruturada. A aplicação oferece uma plataforma onde os casais podem registrar seus conflitos e utilizar métodos guiados para resolvê-los de forma eficiente, promovendo melhor comunicação e entendimento mútuo.
 
@@ -92,10 +98,3 @@ Este comando vai fazer o seguinte:
 
 ## Próximos Passos
 Após rodar a aplicação localmente, o próximo passo será fazer o deploy da aplicação em uma plataforma de hospedagem compatível com Docker Compose, como Heroku, DigitalOcean, ou AWS.
-
-## Links de acesso
-
-https://casal-resolve.vercel.app/
-https://casal-resolve.vercel.app/login
-https://casal-resolve.vercel.app/register
-https://casal-resolve.vercel.app/dashboard
