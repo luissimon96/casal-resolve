@@ -1,10 +1,10 @@
 # Casal Resolve - MVP
 
 ### Links de acesso
-[Casal-Resolve](https://casal-resolve.vercel.app/)
-[Login](https://casal-resolve.vercel.app/login)
-[Registrar](https://casal-resolve.vercel.app/register)
-[Dashboard](https://casal-resolve.vercel.app/dashboard)
+- [Casal-Resolve](https://casal-resolve.vercel.app/)
+- [Login](https://casal-resolve.vercel.app/login)
+- [Registrar](https://casal-resolve.vercel.app/register)
+- [Dashboard](https://casal-resolve.vercel.app/dashboard)
 
 ## Objetivo
 O **Casal Resolve** é um MVP (Minimum Viable Product) desenvolvido para ajudar casais a resolver atritos e conflitos de maneira saudável e estruturada. A aplicação oferece uma plataforma onde os casais podem registrar seus conflitos e utilizar métodos guiados para resolvê-los de forma eficiente, promovendo melhor comunicação e entendimento mútuo.
