@@ -6,83 +6,126 @@
     padding: 40px;
     max-width: 1200px;
     margin: 0 auto;
-  }
+    transition: background-color 0.5s, color 0.5s; /* Transição suave */
+}
   
-  h1 {
+h1 {
     font-size: 2.5rem;
     color: #333;
-  }
+    animation: fadeIn 1s ease-in-out; /* Animação de fade-in */
+}
   
-  p {
+p {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 30px;
-  }
+}
   
-  .action-links {
+.action-links {
     display: flex;
     justify-content: center;
     gap: 20px;
-  }
+}
   
-  /* Estilos dos botões */
-  .btn-primary, .btn-secondary {
+/* Estilos dos botões */
+.btn-primary, .btn-secondary {
     padding: 12px 30px;
     text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s;
-  }
+}
   
-  .btn-primary {
+.btn-primary {
     background-color: #4CAF50;
     color: white;
-  }
+}
   
-  .btn-secondary {
+.btn-secondary {
     background-color: #008CBA;
     color: white;
-  }
+}
   
-  /* Efeito de hover */
-  .btn-primary:hover, .btn-secondary:hover {
+/* Efeito de hover */
+.btn-primary:hover, .btn-secondary:hover {
     opacity: 0.9;
-  }
-  
-  /* Responsividade para telas menores como tablets */
-  @media (max-width: 768px) {
+}
+
+/* Botão para alternar modo */
+.toggle-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos do modo noite */
+.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h1, .dark p {
+    color: white; /* Mudar a cor do texto para branco no modo escuro */
+}
+
+.dark .btn-primary {
+    background-color: #006400; /* Um tom mais escuro para o botão primário */
+}
+
+.dark .btn-secondary {
+    background-color: #005f6b; /* Um tom mais escuro para o botão secundário */
+}
+
+/* Responsividade para telas menores como tablets */
+@media (max-width: 768px) {
     h1 {
-      font-size: 2rem;
+        font-size: 2rem;
     }
-  
+
     p {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
-  
+
     .action-links {
-      flex-direction: column;
-      gap: 15px;
+        flex-direction: column;
+        gap: 15px;
     }
-  
+
     .btn-primary, .btn-secondary {
-      padding: 10px 20px;
-      font-size: 0.9rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
-  }
-  
-  /* Responsividade para telas de celulares */
-  @media (max-width: 480px) {
+}
+
+/* Responsividade para telas de celulares */
+@media (max-width: 480px) {
     h1 {
-      font-size: 1.8rem;
+        font-size: 1.8rem;
     }
-  
+
     p {
-      font-size: 1rem;
+        font-size: 1rem;
     }
-  
+
     .btn-primary, .btn-secondary {
-      padding: 8px 15px;
-      font-size: 0.85rem;
+        padding: 8px 15px;
+        font-size: 0.85rem;
     }
-  }
-  
+}
