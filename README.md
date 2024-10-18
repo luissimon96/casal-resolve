@@ -92,3 +92,10 @@ Este comando vai fazer o seguinte:
 
 ## Próximos Passos
 Após rodar a aplicação localmente, o próximo passo será fazer o deploy da aplicação em uma plataforma de hospedagem compatível com Docker Compose, como Heroku, DigitalOcean, ou AWS.
+
+## Links de acesso
+
+https://casal-resolve.vercel.app/
+https://casal-resolve.vercel.app/login
+https://casal-resolve.vercel.app/register
+https://casal-resolve.vercel.app/dashboard
