@@ -62,24 +62,23 @@ Este comando vai fazer o seguinte:
 - Backend (API): (http://localhost:5000)
 
 ## Estrutura do Projeto
+      
+      /casal-resolve
+      │
+      ├── /backend          # Código do backend (Node.js/Express)
+      │   ├── Dockerfile    # Arquivo de configuração do Docker para o backend
+      │   ├── index.js      # Arquivo principal do servidor backend
+      │   └── package.json  # Dependências do backend
+      │
+      ├── /frontend         # Código do frontend (React)
+      │   ├── Dockerfile    # Arquivo de configuração do Docker para o frontend
+      │   ├── src/          # Código fonte do frontend
+      │   └── package.json  # Dependências do frontend
+      │
+      ├── docker-compose.yml # Arquivo de configuração do Docker Compose
+      └── .env              # Variáveis de ambiente
 
-   ```bash
-   /casal-resolve
-   │
-   ├── /backend          # Código do backend (Node.js/Express)
-   │   ├── Dockerfile    # Arquivo de configuração do Docker para o backend
-   │   ├── index.js      # Arquivo principal do servidor backend
-   │   └── package.json  # Dependências do backend
-   │
-   ├── /frontend         # Código do frontend (React)
-   │   ├── Dockerfile    # Arquivo de configuração do Docker para o frontend
-   │   ├── src/          # Código fonte do frontend
-   │   └── package.json  # Dependências do frontend
-   │
-   ├── docker-compose.yml # Arquivo de configuração do Docker Compose
-   └── .env              # Variáveis de ambiente
-
-### Comandos Úteis
+## Comandos Úteis
 - Para parar os containers:
 
    ```bash
